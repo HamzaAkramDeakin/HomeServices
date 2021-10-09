@@ -18,6 +18,9 @@ router.get('/:id', controller.getOne);
 // Update one customer
 router.put('/:id', controller.updateOne);
 
+// Login
+router.post('/login', controller.login);
+
 // Delete one customer
 router.delete('/:id', controller.deleteOne);
 

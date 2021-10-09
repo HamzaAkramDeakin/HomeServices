@@ -1,5 +1,5 @@
-const { ObjectId } = require('mongodb');
-const customer = require('../services/customer.service');
+const { ObjectId } = require("mongodb");
+const customer = require("../services/customer.service");
 
 // Get all customers
 exports.getAll = (req, res) => {
@@ -23,6 +23,12 @@ exports.updateOne = (req, res) => {
   const { id } = req.params;
   const { body } = req;
   customer.updateOne(ObjectId(id), body, res);
+};
+
+// Login
+exports.login = (req, res) => {
+  const { body } = req;
+  customer.login(body, res);
 };
 
 // Delete one customer

@@ -1,4 +1,4 @@
-const Customer = require('../models/Customer');
+const Customer = require("../models/Customer");
 
 // Get all Customers
 exports.getAll = async (res) => {
@@ -35,6 +35,23 @@ exports.updateOne = async (id, body, res) => {
   try {
     const result = await Customer.updateOne({ _id: id }, { $set: body });
     res.json(result);
+  } catch (ex) {
+    res.status(500).json({ error: ex.message });
+  }
+};
+
+//Login
+exports.login = async (body, res) => {
+  try {
+    const result = await Customer.findOne({
+      email: body.email,
+      password: body.password,
+    });
+    if (!result) {
+      return res.status(401).json({ error: "Incorrect credentials" });
+    } else {
+      res.json(result);
+    }
   } catch (ex) {
     res.status(500).json({ error: ex.message });
   }
