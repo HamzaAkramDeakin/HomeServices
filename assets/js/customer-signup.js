@@ -30,7 +30,7 @@ function handleSignup(event) {
       if (data.error) {
         Swal.fire({
           icon: "error",
-          title: "Incorrect Credentials",
+          title: "Something went wrong",
           text: data.error,
         });
       } else {

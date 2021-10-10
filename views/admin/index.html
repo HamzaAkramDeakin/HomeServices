@@ -13,7 +13,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
       <div class="container">
         <a class="navbar-brand" href="/">
-          <img src="/img/icon.png" alt="" width="28" height="28" class="d-inline-block align-text-top" />
+          <img src="/img/icon.png" alt="" width="28" height="28" class="align-text-top d-inline-block" />
           <span class="mx-2">Mega Services Admin</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
@@ -39,20 +39,18 @@
     <!-- End Navbar -->
     <!-- Main -->
     <main class="container">
-      <button class="btn btn-success mt-4" type="button" data-bs-toggle="modal" data-bs-target="#serviceModal">New service</button>
-      <table id="table" class="table align-middle mt-4">
+      <button class="mt-4 btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#serviceModal">New service</button>
+      <table id="table" class="table mt-4 align-middle">
         <thead>
           <tr>
             <th scope="col">Name</th>
             <th scope="col" width="100px"></th>
           </tr>
         </thead>
-        <tbody>
+        <tbody id="serviceTable">
           <tr>
-            <td>Plumbing</td>
-            <td>
-              <button class="btn btn-danger btn-sm" onclick="handleDelete()" type="button">Delete</button>
-            </td>
+            <td>No services available</td>
+            
           </tr>
         </tbody>
       </table>
@@ -67,14 +65,14 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
           </div>
           <div class="modal-body">
-            <div class="form-floating mb-3">
+            <div class="mb-3 form-floating">
               <input type="text" class="form-control" id="name" placeholder="Name" required />
               <label for="name">Name</label>
             </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save</button>
+            <button type="button" onclick="handleAddService()" class="btn btn-primary">Save</button>
           </div>
         </form>
       </div>

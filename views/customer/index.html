@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mega Services</title>
+    <link rel="shortcut icon" href="/img/icon.png" type="image/png" />
+    <link rel="stylesheet" href="https://bootswatch.com/5/zephyr/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img src="/img/icon.png" alt="" width="28" height="28" class="align-text-top d-inline-block" />
+          <span class="mx-2" id="userName">Mega Services</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+          <div class="me-auto"></div>
+          <ul class="navbar-nav me-4">
+            <li class="nav-item">
+              <a class="nav-link active" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact.html">Contact</a>
+            </li>
+          </ul>
+          
+          <a class="btn btn-success" href="/admin/login.html">Admin</a>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+    <!-- Hero -->
+    <header class="px-4 py-5 my-5 text-center">
+      <img class="mx-auto mb-4 d-block" src="/img/icon.png" alt="" width="100" height="100" />
+      <h1 class="display-5 fw-bold">Hello there</h1>
+      <div class="mx-auto col-lg-6">
+        <p class="mb-4 lead">Find daily problems and we connect you with a service provider.</p>
+        <form class="input-group" onsubmit="handleSearch(event)">
+          <input type="text" id="term" class="form-control" placeholder="What service are you looking for..." required />
+          <button class="btn btn-primary" type="submit">Search</button>
+        </form>
+      </div>
+    </header>
+    <!-- End Hero -->
+    <!-- Main -->
+    <main class="container">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <div class="col">
+          <div class="card h-100 text-decoration-none" data-bs-toggle="modal" data-bs-target="#chatModal" data-bs-service="Plumbing">
+            <img src="/img/service.png" class="card-img-top" alt="" />
+            <div class="card-body">
+              <h5 class="mb-0 card-title">Plumbing</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 text-decoration-none" data-bs-toggle="modal" data-bs-target="#chatModal" data-bs-service="Renovating">
+            <img src="/img/service.png" class="card-img-top" alt="" />
+            <div class="card-body">
+              <h5 class="mb-0 card-title">Renovating</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- End Main -->
+    <!-- Modal -->
+    <div class="modal fade" id="chatModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Chat</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <div class="chat-conversation">
+              <div class="chat-bubble">Hi, I am a chat bot</div>
+              <div class="chat-bubble">How can I help you?</div>
+              <div class="chat-bubble chat-bubble--inverse">I need to fix my pipes</div>
+              <div class="chat-bubble">Okay, we are sending a plumber and he will be there in 30 minutes</div>
+              <div class="chat-bubble chat-bubble--inverse">Thanks</div>
+            </div>
+            <form onsuspend="handleSend(event)">
+              <div class="input-group">
+                <input type="text" id="chatMessage" class="form-control" placeholder="Type a message" required />
+                <button class="btn btn-primary" type="submit">Send</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Modal -->
+    <!-- Footer -->
+    <footer class="py-3 mt-5">
+      <ul class="pb-3 mb-3 nav justify-content-center border-bottom">
+        <li class="nav-item"><a href="/" class="px-2 nav-link text-muted">Home</a></li>
+        <li class="nav-item"><a href="/contact.html" class="px-2 nav-link text-muted">Contact</a></li>
+        <li class="nav-item"><a href="/customer/login.html" class="px-2 nav-link text-muted">Login</a></li>
+        <li class="nav-item"><a href="/customer/signup.html" class="px-2 nav-link text-muted">Sign up</a></li>
+      </ul>
+      <p class="text-center text-muted">&copy; 2021 Mega Services, Inc</p>
+    </footer>
+    <!-- End Footer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.5/dist/sweetalert2.all.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/home.js"></script>
+  </body>
+</html>
