@@ -14,7 +14,7 @@
       <div class="container">
         <a class="navbar-brand" href="/">
           <img src="/img/icon.png" alt="" width="28" height="28" class="align-text-top d-inline-block" />
-          <span class="mx-2" id="userName">Mega Services</span>
+          <span class="mx-2" id="username">Mega Services</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
           <span class="navbar-toggler-icon"></span>
@@ -23,14 +23,11 @@
           <div class="me-auto"></div>
           <ul class="navbar-nav me-4">
             <li class="nav-item">
-              <a class="nav-link active" href="/">Home</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="/contact.html">Contact</a>
             </li>
           </ul>
           
-          <a class="btn btn-success" href="/admin/login.html">Admin</a>
+          <a class="btn btn-success" onclick="handleLogout()">Logout</a>
         </div>
       </div>
     </nav>
@@ -38,7 +35,7 @@
     <!-- Hero -->
     <header class="px-4 py-5 my-5 text-center">
       <img class="mx-auto mb-4 d-block" src="/img/icon.png" alt="" width="100" height="100" />
-      <h1 class="display-5 fw-bold">Hello there</h1>
+      <h1 class="display-5 fw-bold" id="userName">Hello there</h1>
       <div class="mx-auto col-lg-6">
         <p class="mb-4 lead">Find daily problems and we connect you with a service provider.</p>
         <form class="input-group" onsubmit="handleSearch(event)">
@@ -50,23 +47,8 @@
     <!-- End Hero -->
     <!-- Main -->
     <main class="container">
-      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-        <div class="col">
-          <div class="card h-100 text-decoration-none" data-bs-toggle="modal" data-bs-target="#chatModal" data-bs-service="Plumbing">
-            <img src="/img/service.png" class="card-img-top" alt="" />
-            <div class="card-body">
-              <h5 class="mb-0 card-title">Plumbing</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100 text-decoration-none" data-bs-toggle="modal" data-bs-target="#chatModal" data-bs-service="Renovating">
-            <img src="/img/service.png" class="card-img-top" alt="" />
-            <div class="card-body">
-              <h5 class="mb-0 card-title">Renovating</h5>
-            </div>
-          </div>
-        </div>
+      <div id="cards" class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        
       </div>
     </main>
     <!-- End Main -->

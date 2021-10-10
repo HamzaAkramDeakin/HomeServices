@@ -26,7 +26,7 @@ fetch('/api/customer/login', {
       })
     } else {
       sessionStorage.setItem('customer', JSON.stringify(data));
-      window.location = '/index.html';
+      window.location = '/customer/';
     }
   })
   .catch((ex) => {
