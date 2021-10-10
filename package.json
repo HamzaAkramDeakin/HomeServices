@@ -10,7 +10,8 @@
     "chai": "^4.3.4",
     "express": "^4.17.1",
     "jest": "^27.2.5",
-    "mongoose": "^6.0.9"
+    "mongoose": "^6.0.9",
+    "socket.io": "^4.2.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.13"

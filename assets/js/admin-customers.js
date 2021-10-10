@@ -78,3 +78,16 @@ function populate(customer) {
     </tr>
     `;
 }
+
+let online=0;
+const users = document.querySelector('#online')
+function onlineUsers(i){
+  if(i>0){
+    online++
+    users.innerHTML = `Online users: ${online}`
+  }
+  if(i<0){
+    online--
+    users.innerHTML = `Online users: ${online}`
+  }
+}

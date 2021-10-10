@@ -1,5 +1,4 @@
 const chatModal = document.getElementById('chatModal');
-
 /**
  * Listen when modal opens
  */

@@ -1,6 +1,7 @@
-/**
- * Prompt delete
- */
+//To initialize sockets
+var socket = io();
+
+//TO delete
 function promptDelete() {
   return Swal.fire({
     icon: "warning",
@@ -57,17 +58,16 @@ function populate(service) {
 </div>; 
   `;
 }
-function displayUserName(){
-  const user = JSON.parse(sessionStorage.getItem('customer'))
-  const username = document.querySelector('#username')
-  const userName = document.querySelector('#userName')
-  username.innerHTML = `${user.firstName}`
-  userName.innerHTML = `Hello there ${user.firstName}`
+function displayUserName() {
+  const user = JSON.parse(sessionStorage.getItem("customer"));
+  const username = document.querySelector("#username");
+  const userName = document.querySelector("#userName");
+  username.innerHTML = `${user.firstName}`;
+  userName.innerHTML = `Hello there ${user.firstName}`;
 }
 displayUserName();
 
-function handleLogout(){
+function handleLogout() {
   localStorage.clear();
-  window.location = '/'
-
+  window.location = "/";
 }

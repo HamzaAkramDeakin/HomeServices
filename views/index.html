@@ -13,7 +13,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
       <div class="container">
         <a class="navbar-brand" href="/">
-          <img src="/img/icon.png" alt="" width="28" height="28" class="d-inline-block align-text-top" />
+          <img src="/img/icon.png" alt="" width="28" height="28" class="align-text-top d-inline-block" />
           <span class="mx-2">Mega Services</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
@@ -38,10 +38,10 @@
     <!-- End Navbar -->
     <!-- Hero -->
     <header class="px-4 py-5 my-5 text-center">
-      <img class="d-block mx-auto mb-4" src="/img/icon.png" alt="" width="100" height="100" />
+      <img class="mx-auto mb-4 d-block" src="/img/icon.png" alt="" width="100" height="100" />
       <h1 class="display-5 fw-bold">Hello there</h1>
-      <div class="col-lg-6 mx-auto">
-        <p class="lead mb-4">Find daily problems and we connect you with a service provider.</p>
+      <div class="mx-auto col-lg-6">
+        <p class="mb-4 lead">Find daily problems and we connect you with a service provider.</p>
         <form class="input-group" onsubmit="handleSearch(event)">
           <input type="text" id="term" class="form-control" placeholder="What service are you looking for..." required />
           <button class="btn btn-primary" type="submit">Search</button>
@@ -51,24 +51,7 @@
     <!-- End Hero -->
     <!-- Main -->
     <main class="container">
-      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-        <div class="col">
-          <div class="card h-100 text-decoration-none" data-bs-toggle="modal" data-bs-target="#chatModal" data-bs-service="Plumbing">
-            <img src="/img/service.png" class="card-img-top" alt="" />
-            <div class="card-body">
-              <h5 class="card-title mb-0">Plumbing</h5>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100 text-decoration-none" data-bs-toggle="modal" data-bs-target="#chatModal" data-bs-service="Renovating">
-            <img src="/img/service.png" class="card-img-top" alt="" />
-            <div class="card-body">
-              <h5 class="card-title mb-0">Renovating</h5>
-            </div>
-          </div>
-        </div>
-      </div>
+      
     </main>
     <!-- End Main -->
     <!-- Modal -->
@@ -100,18 +83,19 @@
     <!-- End Modal -->
     <!-- Footer -->
     <footer class="py-3 mt-5">
-      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-        <li class="nav-item"><a href="/" class="nav-link px-2 text-muted">Home</a></li>
-        <li class="nav-item"><a href="/contact.html" class="nav-link px-2 text-muted">Contact</a></li>
-        <li class="nav-item"><a href="/customer/login.html" class="nav-link px-2 text-muted">Login</a></li>
-        <li class="nav-item"><a href="/customer/signup.html" class="nav-link px-2 text-muted">Sign up</a></li>
+      <ul class="pb-3 mb-3 nav justify-content-center border-bottom">
+        <li class="nav-item"><a href="/" class="px-2 nav-link text-muted">Home</a></li>
+        <li class="nav-item"><a href="/contact.html" class="px-2 nav-link text-muted">Contact</a></li>
+        <li class="nav-item"><a href="/customer/login.html" class="px-2 nav-link text-muted">Login</a></li>
+        <li class="nav-item"><a href="/customer/signup.html" class="px-2 nav-link text-muted">Sign up</a></li>
       </ul>
       <p class="text-center text-muted">&copy; 2021 Mega Services, Inc</p>
     </footer>
     <!-- End Footer -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.5/dist/sweetalert2.all.min.js"></script>
-    <script src="/js/main.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <!-- <script src="/js/main.js"></script> -->
     <script src="/js/home.js"></script>
   </body>
 </html>
