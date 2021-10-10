@@ -13,7 +13,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
       <div class="container">
         <a class="navbar-brand" href="/">
-          <img src="/img/icon.png" alt="" width="28" height="28" class="d-inline-block align-text-top" />
+          <img src="/img/icon.png" alt="" width="28" height="28" class="align-text-top d-inline-block" />
           <span class="mx-2">Mega Services</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
@@ -38,29 +38,29 @@
     <!-- Main -->
     <main class="container d-flex align-items-center justify-content-center">
       <form class="col-12 col-sm-6 col-md-4" onsubmit="handleContact(event)">
-        <h1 class="h3 mb-4 text-center">Contact us</h1>
-        <div class="form-floating mb-3">
+        <h1 class="mb-4 text-center h3">Contact us</h1>
+        <div class="mb-3 form-floating">
           <input type="text" class="form-control" id="name" placeholder="Name" required />
           <label for="name">Name</label>
         </div>
-        <div class="form-floating mb-3">
+        <div class="mb-3 form-floating">
           <input type="email" class="form-control" id="email" placeholder="name@example.com" required />
           <label for="email">Email address</label>
         </div>
         <div class="mb-3">
           <textarea class="form-control" id="message" placeholder="Message" rows="5" required></textarea>
         </div>
-        <button class="w-100 btn btn-primary" type="submit">Log in</button>
+        <button class="w-100 btn btn-primary" onclick="handleSend(event)" type="submit">Submit</button>
       </form>
     </main>
     <!-- End Main -->
     <!-- Footer -->
     <footer class="py-3 mt-4">
-      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-        <li class="nav-item"><a href="/" class="nav-link px-2 text-muted">Home</a></li>
-        <li class="nav-item"><a href="/contact.html" class="nav-link px-2 text-muted">Contact</a></li>
-        <li class="nav-item"><a href="/customer/login.html" class="nav-link px-2 text-muted">Login</a></li>
-        <li class="nav-item"><a href="/customer/signup.html" class="nav-link px-2 text-muted">Sign up</a></li>
+      <ul class="pb-3 mb-3 nav justify-content-center border-bottom">
+        <li class="nav-item"><a href="/" class="px-2 nav-link text-muted">Home</a></li>
+        <li class="nav-item"><a href="/contact.html" class="px-2 nav-link text-muted">Contact</a></li>
+        <li class="nav-item"><a href="/customer/login.html" class="px-2 nav-link text-muted">Login</a></li>
+        <li class="nav-item"><a href="/customer/signup.html" class="px-2 nav-link text-muted">Sign up</a></li>
       </ul>
       <p class="text-center text-muted">&copy; 2021 Mega Services, Inc</p>
     </footer>
