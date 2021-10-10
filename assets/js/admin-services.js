@@ -10,7 +10,6 @@ async function handleDelete(id) {
       .then((res) => res.json())
       .then((data) => {
         if (data.error) {
-          console.log(data.error);
           Swal.fire({
             icon: "error",
             title: "Something went wrong",
@@ -70,7 +69,11 @@ function handleAddService() {
       }
     })
     .catch((ex) => {
-      toast.error(ex.message);
+      Swal.fire({
+        icon: "error",
+        title: "Something went wrong",
+        text: ex.message,
+      });
     })
     .finally(() => {
       getServices();
@@ -87,7 +90,7 @@ function getServices() {
       Swal.fire({
         icon: "error",
         title: "Something went wrong",
-        text: data.error,
+        text: ex.message,
       });
     });
 }
