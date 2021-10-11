@@ -2,6 +2,10 @@
 
 Find daily problems and we connect you with a service provider.
 
+Clone the repo in your computer go into cmd and type git clone "Repo Link"
+
+type cd "Repo name "
+
 First you need to run this commad "npm init" which initiates the npm and
 creates the essential node files in your project
 
