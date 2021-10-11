@@ -7,7 +7,7 @@ async function initServer() {
   const port = process.env.PORT || 8080;
   // const mongoURI = 'mongodb+srv://HamzaAkram:Hamza123@cluster0.1plbq.mongodb.net/MyWeb?retryWrites=true&w=majority';
   const mongoURI =
-    "mongodb+srv://astronaut:321liftoff@hyades-9imsw.mongodb.net/mega-services?retryWrites=true&w=majority";
+    "mongodb+srv://HamzaAkramDeakin:2LRPNh1uUusJh6tJ@cluster0.nc462.mongodb.net/MegaCons?retryWrites=true&w=majority";
   const app = express();
   const server = http.createServer(app);
   const io = new Server(server);

@@ -15,5 +15,18 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.13"
-  }
+  },
+  "description": "Find daily problems and we connect you with a service provider.",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HamzaAkramDeakin/sit725-2021-t2-prac7.git"
+  },
+  "author": "Hamza Akram",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HamzaAkramDeakin/sit725-2021-t2-prac7/issues"
+  },
+  "homepage": "https://github.com/HamzaAkramDeakin/sit725-2021-t2-prac7#readme"
 }
