@@ -71,3 +71,4 @@ function handleLogout() {
   localStorage.clear();
   window.location = "/";
 }
+

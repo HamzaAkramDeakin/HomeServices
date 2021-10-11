@@ -30,11 +30,16 @@ async function initServer() {
   app.use("/api/contact", require("./routes/contact"));
   app.use("/api/customer", require("./routes/customer"));
 
+  let onlineUsers = 0;
   // Log when the user connects or disconnect
   io.on("connection", (socket) => {
     console.log("Client Connected");
-    socket.on("disconnect", (socket) => {
+    onlineUsers++;
+    io.emit('online', {online:onlineUsers-1});
+    socket.on("disconnect", () => {
       console.log("Client disconnected");
+      onlineUsers--;
+      io.emit('online', {online:onlineUsers});
     });
   });
 

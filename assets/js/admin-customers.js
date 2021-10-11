@@ -1,6 +1,7 @@
 /**
  * Delete
  */
+var socket = io()
 async function handleDelete(id) {
   const confirmed = await promptDelete();
   if (confirmed) {
@@ -79,15 +80,7 @@ function populate(customer) {
     `;
 }
 
-let online=0;
-const users = document.querySelector('#online')
-function onlineUsers(i){
-  if(i>0){
-    online++
-    users.innerHTML = `Online users: ${online}`
-  }
-  if(i<0){
-    online--
-    users.innerHTML = `Online users: ${online}`
-  }
-}
+socket.on('online', function (data) {
+  const users = document.querySelector('#online');
+  users.innerHTML = `Online customers: ${data.online}`;
+});
